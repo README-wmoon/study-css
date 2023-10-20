@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex 이미지 갤러리</title>
+  <style>
+    .flex-container{
+      /* border: 1px solid black; */
+      display: flex;
+      column-gap: 24px;
+      
+    }
+
+    /* flex-container 속에 있는 flex-item 이자 img를 감싸는 flex-container */
+    .item{
+      /* border: 1px solid red; */
+      flex-shrink: 1;
+      flex-basis: 25%;
+
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+    }
+
+    .item > img{
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="item">
+      <img src="https://cdn.pixabay.com/photo/2023/05/21/20/21/meadowsweet-8009380_640.jpg"/>
+      <img src="https://cdn.pixabay.com/photo/2023/06/04/05/27/motorcycle-8038868__340.jpg"/>
+      <img src="https://cdn.pixabay.com/photo/2023/05/25/08/42/fishing-rod-8016641__340.jpg"/>
+    </div>
+    <div class="item">
+      <img src="https://cdn.pixabay.com/photo/2023/05/30/15/43/koala-8028992_640.jpg"/>
+      <img src="https://cdn.pixabay.com/photo/2023/05/30/16/50/milk-8029140_640.png"/>
+    </div>
+    <div class="item">
+      <img src="https://cdn.pixabay.com/photo/2023/05/29/12/52/hands-8025984_640.jpg"/>
+      <img src="https://cdn.pixabay.com/photo/2023/05/17/08/55/tree-7999477__340.jpg"/>
+    </div>
+    <div class="item">
+      <img src="https://cdn.pixabay.com/photo/2023/05/30/10/18/wedding-8028163__340.jpg"/>
+      <img src="https://cdn.pixabay.com/photo/2023/05/31/17/54/cat-8031947__340.jpg"/>
+      <img src="https://cdn.pixabay.com/photo/2023/02/07/13/55/forest-7774205__340.jpg"/>
+    </div>
+  </div>
+</body>
+</html>

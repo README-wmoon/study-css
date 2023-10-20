@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transform 속성</title>
+  <style>
+    .box-wrap{
+      border: 3px dashed;
+      width: fit-content;
+      height: fit-content;
+    }
+
+    .box{
+      background-color: green;
+      border: 3px solid black;
+      padding: 2px;
+
+      height: 100px;
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>transform 속성</h1>
+  <h2>translateX(값)</h2>
+  <p>값만큼 X축으로 이동한 곳에 그려진다</p>
+  <p>ex) transform:translateX(100px)</p>
+  <div class="box-wrap">
+    <div style="transform: translateX(100px);" class="box"></div>
+  </div>
+  <h2>translateY(값)</h2>
+  <p>값만큼 Y축으로 이동한 곳에 그려진다</p>
+  <p>ex) transform:translateY(20px)</p>
+  <div class="box-wrap">
+    <div style="transform: translateY(20px);" class="box"></div>
+  </div>
+  <h2>translate(값1, 값2)</h2>
+  <p>값1만큼 X축으로, 값2만큼 Y축으로 이동한 곳에 그려진다</p>
+  <p>ex) transform:translate(50px, 20px)</p>
+  <div class="box-wrap">
+    <div style="transform: translate(50px, 20px);" class="box"></div>
+  </div>
+  <hr/>
+  <h2>rotateX(각도)</h2>
+  <p>X축을 중심으로 각도만큼 회전시킨 상태로 그려진다(각도단위 deg)</p>
+  <p>ex) transform:rotateX(50deg)</p>
+  <div class="box-wrap">
+    <div style="transform: rotateX(50deg);" class="box"></div>
+  </div>
+  <h2>rotateY(각도)</h2>
+  <p>Y축을 중심으로 각도만큼 회전시킨 상태로 그려진다(각도단위 deg)</p>
+  <p>ex) transform:rotateY(50deg)</p>
+  <div class="box-wrap">
+    <div style="transform: rotateY(50deg);" class="box"></div>
+  </div>
+  <h2>rotate(각도)</h2>
+  <p>평면을 기준으로 각도만큼 회전시킨 상태로 그려진다(각도단위 deg)</p>
+  <p>ex) transform:rotate(50deg)</p>
+  <div class="box-wrap">
+    <div style="transform: rotate(50deg);" class="box"></div>
+  </div>
+  <hr/>
+  <h2>scaleX(비율)</h2>
+  <p>x축을 기준으로 비율만큼 확대/축소</p>
+  <p>ex) transform:scaleX(1.2)</p>
+  <div class="box-wrap">
+    <div style="transform: scaleX(2);" class="box">HELLO WORLD</div>
+  </div>
+  <h2>scaleY(비율)</h2>
+  <p>y축을 기준으로 비율만큼 확대/축소</p>
+  <p>ex) transform:scaleY(0.5)</p>
+  <div class="box-wrap">
+    <div style="transform: scaleY(0.5);" class="box">HELLO WORLD</div>
+  </div>
+  <h2>scale(비율)</h2>
+  <p>x,y축을 기준으로 비율만큼 확대/축소</p>
+  <p>ex) transform:scale(0.88)</p>
+  <div class="box-wrap">
+    <div style="transform: scale(0.8);" class="box">HELLO WORLD</div>
+  </div>
+</body>
+</html>

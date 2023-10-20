@@ -1,0 +1,138 @@
+유용한 단축키
+    라이브 서버 실행(html 문서를 브라우저로 열기) : alt + l + o
+    복사 붙여넣기 : alt shift 위/아래화살표
+    코드 위아래 이동 : alt 위/아래화살표
+    포멧 정렬 : ctrl k f
+    주석 : ctrl /
+    전체 드래그 : ctrl a
+
+폰트 적용
+    구글 웹폰트
+        1. html 문서 속의 <head> 태그 안쪽에다가 <link> 태그를 추가한다.
+            이후 css 문서에 font-family 속성을 사용하여 폰트 적용
+        
+        2. css 문서 안에다가 @import 사용하여 코드를 추가하고
+            이후 font-family 속성을 사용하여 폰트 적용
+
+font-family : '폰트이름1' , '폰트이름2', ....
+
+    --> 폰트이름1이 설치되어있다면 그걸로 보여준다.
+    --> 설치가 안되어있다면 폰트이름2를 적용
+    --> 설치가 안되어있다면 ....
+
+---------------------------------------------------------------------------------------------------
+애니메이션
+    (트랜지션의 발전된 형태)
+    한 컷 한 컷을 정의해놓고, 연속적으로 재생해줘 라고 하면 움직이는 것처럼 보이게 된다.
+
+keyframe
+    애니메이션의 이름이 되며, 각각의 시간의 흐름에 따라 적용해야할 디자인을 정의해 놓는다.
+
+animation-iteration-count
+    몇회 재생시킬 것인가
+    infinite --> 무한 재생
+
+animation-direction
+    어떠한 방향으로 재생시킬 것인가
+    normal : 0 --> 100, 0-->100, 0-->100 , ...
+    reverse : 100--> 0 , 100->0, 100->0, ...
+    alternate : 0-->100, 100-->0, 0-->100, ...
+    alternate-reverse: 100-->0, 0-->100, 100->0, ...
+
+animation-fill-mode (기본값 : none)
+    none : 애니메이션 끝나고 애니메이션 적용 안된 상태 유지
+    forwards : 애니메이션 끝나고 애니메이션이 끝났을때 마지막 상태 유지
+    backwords : 애니메이션 딜레이 시간동안 시작상태를 유지
+    both : 애니메이션 딜레이 동안 시작상태 유지 + 애니메이션 끝나고 마지막상태 유지
+
+
+animation-play-state (기본값 : running)
+    running : 애니메이션 재생 상태
+    paused : 애니메이션 중지 상태
+
+
+
+
+2배 확대 --> 0.5배축소 --> 3배확대
+@keyframes 애니메이션이름 {
+    10% {
+        transform:scale(2);
+    }
+
+    30% {
+        transform:scale(0.5);
+    }
+
+    100% {
+        transform:scale(3);
+    }
+}
+
+div.ball {
+    width : 100px;
+    height : 100px;
+    border-radius:50%;
+    background-color:black;
+    transition:1s;
+}
+
+div.ball:hover {
+    width : 100px;
+    height : 100px;
+    border-radius:50%;
+    background-color:black;
+    transition:1s;
+    transform:scale(2);
+}
+
+반응형 웹사이트 제작
+    반응형 웹사이트란? 웹사이트의 화면이 달라지더라도 웹사이트 구성 요소들이
+    일괄적으로 전달되도록 구현하는 방법론
+
+    컴퓨터, 노트북, 태블릿, 모바일을 사용하여 웹사이트에 접속 하더라도
+    동일한 질의 사용자 경험을 제공해야 한다.
+    
+미디어 쿼리
+    사용자가 웹사이트를 보는 화면 조건에 알맞게 서로 다른 css를 적용시키기
+    위해 사용한다.        
+
+미디어 유형에 따른 조건
+    screen : 컴퓨터 혹은 스마트기기의 화면
+    tv : 영상 + 음성이 출력되는 장치
+    projection : 프로젝터
+
+가로길이에 따른 조건
+    width : 웹사이트의 가로 길이에 따른 조건
+    max-width : 웹사이트의 최대 가로길이에 따른 조건
+    min-width : 웹사이트의 최소 가로길이에 따른 조건
+    device-width : 기기의 가로길이에 따른 조건
+
+세로길이에 따른 조건
+    height : 웹사이트에 세로 길이에 따른 조건
+    max-height : 웹사이트의 최대 세로길이에 따른 조건
+    min-height : 웹사이트의 최소 세로길이에 따른 조건
+    device-height : 기기의 세로길이에 따른 조건
+
+화면 방향에 따른 조건
+    orientation : landscape --> 가로일때 적용할 디자인
+    orientation : portrait --> 세로모드일때 적용할 디자인
+
+조건 여러개를 동시에 설정하는 방법은 and 를 사용한다.
+
+@media 조건1 and 조건2 and 조건3 {
+    div {
+        backbround-color:red;
+    }
+
+    p {
+        font-size:50px;
+    }
+}
+
+--> 조건1과 그리고 조건2와 그리고 조건3을 모두 만족하는 경우에 적용되는 디자인
+
+
+보통은 모바일, 테블릿, 데스크탑
+0~600 모바일
+600~1024 태블릿
+1024~ 노트북이나 데스크탑(PC)

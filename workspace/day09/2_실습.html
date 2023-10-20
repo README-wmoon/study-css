@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜지션 활용</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+       
+       body {
+        margin: 0;
+        padding: 0;
+       }
+
+       header {
+        background-color: black;
+        height: 60px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       }
+
+       #menu {
+        display: none;
+       }
+
+       .line {
+        border: 2px solid white;
+       }
+
+       label {
+        display: flex;
+        flex-direction: column;
+        width: 30px;
+        row-gap: 5px;
+        justify-content: space-between;
+        cursor: pointer;
+       }
+
+       aside {
+        position: fixed;
+        background-color: gray;
+        right: 0;
+        top: 60px;
+        width: 240px;
+        height: calc(100% - 60px);
+        overflow-y: scroll;
+        transform: translateX(230px);
+        transition: 2s;
+       }
+       #menu:checked + aside {
+        transform: translateX(0);
+       }
+    </style>
+</head>
+<body>
+   <header>
+        <h1>로고</h1>
+        <label for="menu">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+           
+        </label>
+        <input id="menu" type="checkbox"/>
+        <aside>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+            <h2>ddd</h2>
+        </aside>
+   </header>
+   <main>
+     <div class="card"></div>
+   </main>
+</body>
+</html>

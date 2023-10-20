@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>트랜지션 활용</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbit', sans-serif;
+    }
+
+    body {
+      background-color: #fbfbfb;
+    }
+
+    header {
+      background-color: black;
+      height: 60px;
+      color: white;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #menu {
+      display: none;
+    }
+
+    .line {
+      border: 2px solid white;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      width: 30px;
+      row-gap: 5px;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    aside {
+      position: fixed;
+      background-color: gray;
+      right: 0;
+      top: 60px;
+      width: 240px;
+      height: calc(100% - 60px);
+      overflow-y: scroll;
+      transform: translateX(240px);
+      transition: 0.2s;
+      z-index: 1;
+    }
+
+    #menu:checked+aside {
+      transform: translateX(0);
+    }
+
+    .card {
+      /*border : 3px dashed black;*/
+      width: fit-content;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .black {
+      color: white;
+    }
+
+    .card:hover {
+      transform: scale(1.01);
+      box-shadow: 2px 4px 16px rgba(0, 0, 0, .16);
+    }
+
+    .card>img {
+      width: 400px;
+      height: 500px;
+    }
+
+    .card-txt {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 30px;
+    }
+
+    .card-container {
+      display: flex;
+      width: fit-content;
+      column-gap: 20px;
+
+      transform: translateX(490px);
+    }
+
+    .container-wrap {
+      width: 100%;
+      /*border: 3px dashed;*/
+      overflow-x: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>로고</h1>
+    <label for="menu">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </label>
+    <input id="menu" type="checkbox" />
+    <aside>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>ddd</h2>
+      <h2>dddwgweggw</h2>
+    </aside>
+  </header>
+  <main>
+    <div class="container-wrap">
+
+      <div class="card-container">
+        <div class="card">
+          <img
+            src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/store-card-40-macbook-air-202306?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1683844828182"
+            alt="">
+          <div class="card-txt">
+            <p>MACBOOK AIR 15</p>
+            <h2>크게 펼치고, 얇게 접다.</h2>
+            <p>1,890,000부터</p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/store-card-40-mac-studio-202306?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1683844828120"
+            alt="">
+          <div class="card-txt">
+            <p>MACBOOK AIR 15</p>
+            <h2>크게 펼치고, 얇게 접다.</h2>
+            <p>1,890,000부터</p>
+          </div>
+        </div>
+        <div class="card black">
+          <img
+            src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/store-card-40-iphone-14-pro-202303_GEO_KR?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1677311461331"
+            alt="">
+          <div class="card-txt">
+            <p>MACBOOK AIR 15</p>
+            <h2>크게 펼치고, 얇게 접다.</h2>
+            <p>1,890,000부터</p>
+          </div>
+        </div>
+        <div class="card black">
+          <img
+            src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/store-card-40-ipad-air-202203?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1645636337374"
+            alt="">
+          <div class="card-txt">
+            <p>MACBOOK AIR 15</p>
+            <h2>크게 펼치고, 얇게 접다.</h2>
+            <p>1,890,000부터</p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/store-card-40-watch-ultra-202209_GEO_KR?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1661382550094"
+            alt="">
+          <div class="card-txt">
+            <p>MACBOOK AIR 15</p>
+            <h2>크게 펼치고, 얇게 접다.</h2>
+            <p>1,890,000부터</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <style>
+        .ball {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            border-radius: 50%;
+            animation-name: ani2;
+            animation-duration: 5s;
+            animation-iteration-count: 1s;
+            animation-direction: normal;
+            /*역재생*/
+            animation-direction: alternate-reverse;
+
+            /*animation-delay: 3s;*/
+            animation-fill-mode: both;
+            animation-timing-function: ease-in-out;
+        }
+
+        .ball:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes ani2 {
+            0% {
+                background-color: black;
+                transform: translateX(10px);
+            }
+
+            30% {
+                background-color: red;
+                transform: translateX(-30px) translateY(100px);
+            }
+
+            60% {
+                background-color: aqua;
+                transform: translateX(-70px);
+            }
+
+            70% {
+                background-color: bisque;
+                transform: translateX(-90px);
+            }
+
+            100% {
+                background-color: gold;
+            }
+        }
+
+        @keyframes ani1 {
+            /* 0% 
+            from {
+
+            }*/
+            /*100% */
+            to {
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ball">
+
+    </div>
+</body>
+</html>
