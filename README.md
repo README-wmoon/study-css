@@ -374,4 +374,20 @@ device-height : 기기의 세로길이에 따른 조건
 1024~ 노트북이나 데스크탑(PC)
 ```
 
-### 
+### CSS 디자인
+```
+마우스가 올렸을 때 디자인 적용
+    요소:hover {
+
+    }
+
+input 태그가 select되었을 때 디자인 적용
+    요소:selected {
+
+    }
+
+브라이저 가로길이가 900px이면 디자인 적용
+    @media screen and (width:900px) {
+        
+    }
+```
